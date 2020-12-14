@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/styles/components/Footer.scss';
 
 const Footer: React.FC = () => (
   <footer className="footer">
@@ -10,9 +11,9 @@ const Footer: React.FC = () => (
         rel="noopener noreferrer"
         className="footer__link"
       >
-        Frontend Mentor
-      </a>
-      . Coded by{' '}
+        Frontend Mentor.
+      </a>{' '}
+      Coded by{' '}
       <a
         href="https://www.linkedin.com/in/albin-wotoszyn"
         target="_blank"
