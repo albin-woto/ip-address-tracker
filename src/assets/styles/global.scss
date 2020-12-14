@@ -1,3 +1,10 @@
+// Vars
+$primary-color: #fafafa;
+$very-dark-gray: hsl(0, 0%, 17%);
+$dark-gray: hsl(0, 0%, 59%);
+$background-color: rgb(84, 95, 186);
+
+// Global Styles
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +17,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+// Mixins
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin link-animation(
+  $link-color,
+  $visited-color,
+  $underline-color,
+  $active-color
+) {
+  text-decoration: none;
+  position: relative;
+  color: $link-color;
+
+  &:visited {
+    color: $visited-color;
+  }
+  // Underline animation
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    right: 0;
+    background: $underline-color;
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+    background: $underline-color;
+  }
+
+  &:active {
+    color: $active-color;
+  }
+}
+
+@mixin transparent-tap {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
