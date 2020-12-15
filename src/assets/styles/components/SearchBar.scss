@@ -1,0 +1,45 @@
+@import '../global.scss';
+
+.search {
+  position: relative;
+  margin-top: 1.75rem;
+
+  &__input {
+    height: 2.5rem;
+    width: 85vw;
+    padding-left: 0.8rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.125rem;
+    color: $very-dark-gray;
+    caret-color: $very-dark-gray;
+
+    &::placeholder {
+      font-size: 1rem;
+      color: $dark-gray;
+    }
+
+    &:enabled {
+      outline: none;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: $very-dark-gray;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    @include transparent-tap;
+
+    img {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
