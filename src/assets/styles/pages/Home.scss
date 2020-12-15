@@ -1,0 +1,19 @@
+@import '../global.scss';
+
+.top-section {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../images/pattern-bg.png');
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $primary-color;
+  }
+}

@@ -1,10 +1,15 @@
 import React from 'react';
+import '../assets/styles/pages/Home.scss';
+import SearchBar from '../components/SearchBar';
 
 const Home: React.FC = () => {
   return (
-    <>
-    <h1>Hello world</h1>
-    </>
+    <main>
+      <div className="top-section">
+        <h1 className="top-section__title">IP Address Tracker</h1>
+        <SearchBar />
+      </div>
+    </main>
   );
 };
 
