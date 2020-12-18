@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/styles/pages/Home.scss';
 import SearchBar from '../components/SearchBar';
+import Dashboard from '../components/Dashboard';
 
 const Home: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const Home: React.FC = () => {
       <div className="top-section">
         <h1 className="top-section__title">IP Address Tracker</h1>
         <SearchBar />
+        <Dashboard />
       </div>
     </main>
   );
