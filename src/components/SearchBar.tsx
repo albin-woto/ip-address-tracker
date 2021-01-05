@@ -12,7 +12,11 @@ const SearchBar: React.FC = () => {
 
   // Get Public IP info in initial render
   useLayoutEffect(() => {
+    const controller = new AbortController();
     getIpInfo('').then((publicIpInfo) => setIpInfo(publicIpInfo!));
+
+    // Cleanup
+    return () => controller.abort();
   }, [setIpInfo]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
