@@ -19,6 +19,14 @@
     flex-direction: column;
     padding: 0.5rem 0;
   }
+
+  &__error {
+    padding-top: 0.25rem;
+    text-align: center;
+    font-size: 1rem;
+    color: $very-dark-gray;
+    text-decoration: underline $dark-gray;
+  }
 }
 
 .item {
