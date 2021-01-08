@@ -1,3 +1,4 @@
+// The properties are optional just in case API changes something
 export default interface IpInfo {
   // code only in error
   code?: number;

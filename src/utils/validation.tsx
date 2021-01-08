@@ -4,7 +4,7 @@ const validation = (ip: string): boolean => {
   );
   let validIp = false;
 
-  // Empty ip value in request returns public IP info, that's why is "valid"
+  // Empty ip value in request returns public IP info, that's why it is "valid"
   if (regex.test(ip) || ip === '') {
     validIp = true;
   }
