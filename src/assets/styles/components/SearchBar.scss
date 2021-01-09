@@ -53,3 +53,18 @@
     color: $primary-color;
   }
 }
+
+// ----- Media queries
+
+// Small devices
+@media screen and (max-height: 660px) {
+  .search {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .search {
+    margin-top: 0.5rem;
+  }
+}

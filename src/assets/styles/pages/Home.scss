@@ -17,3 +17,14 @@
     color: $primary-color;
   }
 }
+
+// ----- Media queries
+
+// Small devices
+@media screen and (max-height: 620px) {
+  .top-section {
+    &__title {
+      margin-top: 0.5rem;
+    }
+  }
+}
