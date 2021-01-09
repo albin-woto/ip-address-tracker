@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import '../assets/styles/pages/Home.scss';
 import SearchBar from '../components/SearchBar';
 import Dashboard from '../components/Dashboard';
-import Map from '../components/Map';
+
+const Map = lazy(() => import('../components/Map'));
 
 const Home: React.FC = () => {
   return (
