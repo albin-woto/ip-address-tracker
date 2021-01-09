@@ -15,36 +15,34 @@ const About = () => (
           Frontend Mentor.
         </a>
       </p>
-      <p className="about__text">
-        Technologies used in this project:
-        <ul>
-          <li>React</li>
-          <li>TypeScript</li>
-          <li>SASS</li>
-          <li>
-            IP Geolocation by{' '}
-            <a
-              href="https://geo.ipify.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="about__link"
-            >
-              ipify
-            </a>
-            <li>
-              Map by{' '}
-              <a
-                href="https://react-leaflet.js.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="about__link"
-              >
-                React Leaflet
-              </a>
-            </li>
-          </li>
-        </ul>
-      </p>
+      <p className="about__text">Technologies used in this project:</p>
+      <ul className="about__list">
+        <li>React</li>
+        <li>TypeScript</li>
+        <li>SASS</li>
+        <li>
+          IP Geolocation by{' '}
+          <a
+            href="https://geo.ipify.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about__link"
+          >
+            ipify
+          </a>
+        </li>
+        <li>
+          Map by{' '}
+          <a
+            href="https://react-leaflet.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about__link"
+          >
+            React Leaflet
+          </a>
+        </li>
+      </ul>
       <p className="about__text">
         You can check the code in{' '}
         <a
