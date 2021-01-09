@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../assets/styles/pages/About.scss';
 
 const About = () => (
   <main className="about">

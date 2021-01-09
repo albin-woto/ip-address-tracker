@@ -1,0 +1,52 @@
+@import '../global.scss';
+
+.about {
+  @include flex-centered;
+
+  // Fallback background
+  @include background-grad;
+  // Background with gradient
+  background-image: url('../../images/topography.svg'),
+    linear-gradient(to right, $background-color-L, $background-color-R);
+  background-position-x: center;
+
+  &__glass {
+    height: 70vh;
+    width: 75vw;
+    padding: 1.25rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1.5rem;
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(0.35rem);
+    box-shadow: 0.8rem 0.8rem 0.8rem rgba(45, 54, 68, 0.6);
+    line-height: 1.25rem;
+
+    ul {
+      list-style: circle;
+      list-style-position: inside;
+      padding: 1rem 0.25rem;
+    }
+  }
+
+  &__text {
+    color: $primary-color;
+  }
+
+  &__link {
+    font-weight: 500;
+    @include link-animation(
+      white ,
+      white,
+      $primary-color,
+      $dark-gray
+    );
+  }
+}
+
+#back {
+  align-self: center;
+}
