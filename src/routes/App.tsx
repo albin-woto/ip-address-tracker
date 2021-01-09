@@ -4,6 +4,7 @@ import { IpContextProvider } from '../context/IpContext';
 
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
+import About from '../pages/About';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Layout>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
           </Switch>
         </Layout>
       </BrowserRouter>
