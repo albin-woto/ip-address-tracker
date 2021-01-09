@@ -2,7 +2,8 @@
 $primary-color: #fafafa;
 $very-dark-gray: hsl(0, 0%, 17%);
 $dark-gray: hsl(0, 0%, 59%);
-$background-color: rgb(84, 95, 186);
+$background-color-L: hsl(245, 42%, 42%);
+$background-color-R: hsl(226, 72%, 63%);
 
 // Global Styles
 * {
@@ -64,4 +65,13 @@ body {
 @mixin transparent-tap {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+}
+
+@mixin background-grad {
+  background: $background-color-L;
+  background: linear-gradient(
+    90deg,
+    $background-color-L 0%,
+    $background-color-R 100%
+  );
 }

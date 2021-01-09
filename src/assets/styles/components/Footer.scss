@@ -3,7 +3,7 @@
 .footer {
   min-height: 2rem;
   @include flex-centered;
-  background-color: $background-color;
+  @include background-grad;
 
   &__text {
     text-align: center;
