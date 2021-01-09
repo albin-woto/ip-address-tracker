@@ -4,14 +4,13 @@
   margin-top: 1rem;
   width: 85vw;
   max-width: 20rem;
-  height: 15rem;
   border-radius: 0.8rem;
   background-color: #fff;
   z-index: 100;
 
   &__list {
     list-style: none;
-    margin: 1rem 0;
+    padding: 0.5rem 0;
   }
 
   &__item {
@@ -37,8 +36,9 @@
   }
 
   &__value {
+    text-align: center;
     font-size: 1.2rem;
-    padding-top: 0.25rem;
+    padding: 0.25rem 0.25rem 0;
     color: $very-dark-gray;
     font-weight: 700;
   }
@@ -50,7 +50,7 @@
 @media screen and (max-height: 620px) {
   .dashboard {
     &__list {
-      margin: 0.5rem 0;
+      padding: 0.25rem 0;
     }
     &__item {
       padding: 0.25rem 0;
