@@ -13,6 +13,7 @@ import { VenueLocationIcon } from './VenueLocationIcon';
 import 'leaflet/dist/leaflet.css';
 import '../assets/styles/components/Map.scss';
 import IpContext from '../context/IpContext';
+import AboutIcon from '../components/AboutIcon';
 
 const Map = () => {
   const defaultLocation = { lat: -34.65114705956248, lng: -58.44001654662209 };
@@ -52,6 +53,7 @@ const Map = () => {
       <Marker position={mapLocation!} icon={VenueLocationIcon}>
         <Popup>{ipInfo?.location?.city || 'Default Location'}</Popup>
       </Marker>
+      <AboutIcon />
     </MapContainer>
   );
 };
