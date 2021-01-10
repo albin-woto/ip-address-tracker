@@ -20,10 +20,12 @@ export default interface IpInfo {
 
 export type IpContext = {
   ipInfo: IpInfo;
+  loading: boolean;
   setIpInfo: (ipInfo: IpInfo) => void;
+  setLoading: (boolean) => void;
 };
 
 export interface ChangeViewProps {
   center: LatLngExpression;
   zoom: number;
-};
+}
