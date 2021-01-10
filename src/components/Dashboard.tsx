@@ -1,21 +1,15 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import '../assets/styles/components/Dashboard.scss';
 import IpContext from '../context/IpContext';
 import Loader from '../components/Loader';
 
 const Dashboard: React.FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const { ipInfo } = useContext(IpContext);
+  const { ipInfo, loading } = useContext(IpContext);
   const { ip, location, isp, code } = ipInfo;
-
-  useEffect(() => {
-    // If I get some info from request, I stop the loader
-    Object.entries(ipInfo).length !== 0 && setIsLoading(false);
-  }, [ipInfo]);
 
   return (
     <section className="dashboard">
-      {isLoading ? (
+      {loading ? (
         <Loader />
       ) : (
         <>
