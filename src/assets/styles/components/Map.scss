@@ -6,3 +6,9 @@
   width: 100%;
   z-index: 1;
 }
+
+@media screen and (orientation: landscape) {
+  .leaflet-container {
+    min-height: calc(500px - 2rem);
+  }
+}

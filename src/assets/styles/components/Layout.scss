@@ -3,3 +3,9 @@
   display: grid;
   grid-template-rows: 1fr auto;
 }
+
+@media screen and (orientation: landscape) {
+  .layout {
+    min-height: 500px;
+  }
+}
