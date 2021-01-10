@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import IpContext from '../context/IpContext';
 import validation from '../utils/validation';
 import getIpInfo from '../utils/getIpInfo';
@@ -8,17 +8,21 @@ import '../assets/styles/components/SearchBar.scss';
 const SearchBar: React.FC = () => {
   const [isValid, setIsValid] = useState<boolean | undefined>(undefined);
   const [ip, setIp] = useState<string>('');
-  const { setIpInfo } = useContext(IpContext);
+  const { setIpInfo, setLoading } = useContext(IpContext);
 
-  // Get Public IP info in initial render
-  useLayoutEffect(() => {
+  // Get Public IP info on initial render
+  useEffect(() => {
     const controller = new AbortController();
-    getIpInfo('').then((publicIpInfo) => setIpInfo(publicIpInfo!));
-
+    getIpInfo(ip).then((publicIpInfo) => {
+      setIpInfo(publicIpInfo!);
+      setLoading(false);
+    });
     // Cleanup
     return () => controller.abort();
-  }, [setIpInfo]);
+    // eslint-disable-next-line
+  }, []);
 
+  // Handle user input
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIp(e.target.value);
   };
@@ -28,8 +32,15 @@ const SearchBar: React.FC = () => {
     // Validate ip input
     const validationResult = validation(ip);
     setIsValid(validationResult);
-    // If it's valid, send request
-    isValid && getIpInfo(ip).then((ipInfo) => setIpInfo(ipInfo!));
+
+    if (isValid) {
+      setLoading(true);
+
+      getIpInfo(ip).then((ipInfo) => {
+        setIpInfo(ipInfo!);
+        setLoading(false);
+      });
+    }
   };
 
   return (
