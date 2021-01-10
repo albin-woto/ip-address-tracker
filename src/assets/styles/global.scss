@@ -75,3 +75,12 @@ body {
     $background-color-R 100%
   );
 }
+
+// Super large screen
+@media screen and (min-width: 1441px) {
+  // Change default rem value from 16px to 20px
+  // Everything is in rem so it will scale up
+  html {
+    font-size: 125%;
+  }
+}
