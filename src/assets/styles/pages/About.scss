@@ -1,6 +1,7 @@
 @import '../global.scss';
 
 .about {
+  height: calc(100vh - 2rem);
   @include flex-centered;
 
   // Fallback background
@@ -55,9 +56,30 @@
 @media screen and (min-width: 375px) {
   .about {
     &__glass {
-      max-width: 600px;
-      max-height: 400px;
+      max-width: 38rem;
+      max-height: 25rem;
       padding: 1.25rem 1.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    &__glass {
+      max-width: 50rem;
+      max-height: 38rem;
+      padding: 2rem 2rem;
+      font-size: 1.3rem;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__list {
+      li {
+        line-height: 1.75rem;
+      }
     }
   }
 }
