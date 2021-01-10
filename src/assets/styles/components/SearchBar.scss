@@ -69,3 +69,26 @@
     margin-top: 0.5rem;
   }
 }
+
+// Large devices
+@media screen and (min-width: 769px) {
+  .search {
+    margin-top: 2.5rem;
+
+    &__input {
+      height: 3.5rem;
+      max-width: 35rem;
+      font-size: 1.25rem;
+      padding-left: 1.5rem;
+
+      &::placeholder {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__button {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+}
