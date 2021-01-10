@@ -57,3 +57,46 @@
     }
   }
 }
+
+// Large devices
+@media screen and (min-width: 769px) {
+  .dashboard {
+    width: 90%;
+    max-width: 55rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+
+    &__list {
+      width: 95%;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &__item {
+      padding: 0 1.5rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-right: 1px solid hsla(0, 0%, 59%, 0.3);
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  .item {
+    &__title {
+      font-size: 0.75rem;
+      min-width: 5.5rem;
+    }
+    &__value {
+      // Min width or timezone will look weird
+      min-width: 5rem;
+      padding: 1rem 0 0;
+      text-align: left;
+      font-size: 1.5rem;
+    }
+  }
+}
