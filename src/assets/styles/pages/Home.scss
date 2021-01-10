@@ -29,3 +29,12 @@
     }
   }
 }
+
+// Large devices
+@media screen and (min-width: 769px) {
+  .top-section {
+    &__title {
+      margin-top: 2.5rem;
+    }
+  }
+}
