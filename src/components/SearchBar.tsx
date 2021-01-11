@@ -8,16 +8,19 @@ import '../assets/styles/components/SearchBar.scss';
 const SearchBar: React.FC = () => {
   const [isValid, setIsValid] = useState<boolean | undefined>(undefined);
   const [ip, setIp] = useState<string>('');
-  const { setIpInfo, setLoading } = useContext(IpContext);
+  const { setIpInfo, setLoading, ipInfo } = useContext(IpContext);
 
-  // Get Public IP info on initial render
+  // Get Public IP info ONLY in initial render because the free API is really limited
   useEffect(() => {
     const controller = new AbortController();
-    getIpInfo(ip).then((publicIpInfo) => {
-      setIpInfo(publicIpInfo!);
-      setLoading(false);
-    });
-    // Cleanup
+
+    if (Object.entries(ipInfo).length === 0) {
+      getIpInfo(ip).then((publicIpInfo) => {
+        setIpInfo(publicIpInfo!);
+        setLoading(false);
+      });
+    }
+
     return () => controller.abort();
     // eslint-disable-next-line
   }, []);
@@ -33,7 +36,7 @@ const SearchBar: React.FC = () => {
     const validationResult = validation(ip);
     setIsValid(validationResult);
 
-    if (isValid) {
+    if (isValid && ipInfo.ip !== ip) {
       setLoading(true);
 
       getIpInfo(ip).then((ipInfo) => {
