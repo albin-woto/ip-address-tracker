@@ -61,17 +61,17 @@
 // Large devices
 @media screen and (min-width: 769px) {
   .dashboard {
-    width: 90%;
-    max-width: 55rem;
+    min-width: 46rem;
+    width: auto;
+    max-width: 80%;
     height: 8rem;
     display: flex;
     justify-content: center;
 
     &__list {
-      width: 95%;
       padding: 1.5rem 0;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     &__item {
