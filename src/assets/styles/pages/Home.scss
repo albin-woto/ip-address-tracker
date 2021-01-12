@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // Fallback of background
+  @include background-grad;
   background-image: url('../../images/pattern-bg.png');
   background-position-x: center;
   background-repeat: no-repeat;
