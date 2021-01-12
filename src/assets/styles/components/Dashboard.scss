@@ -4,6 +4,8 @@
   margin-top: 1rem;
   width: 85vw;
   max-width: 20rem;
+  @include flex-centered;
+  flex-direction: column;
   border-radius: 0.8rem;
   background-color: #fff;
   z-index: 100;
@@ -65,8 +67,6 @@
     width: auto;
     max-width: 80%;
     height: 8rem;
-    display: flex;
-    justify-content: center;
 
     &__list {
       padding: 1.5rem 0;
