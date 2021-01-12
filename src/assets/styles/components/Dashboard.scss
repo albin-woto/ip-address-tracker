@@ -5,6 +5,8 @@
   width: 85vw;
   max-width: 20rem;
   @include flex-centered;
+  // Fix flex in safari
+  flex: 1 0 auto;
   flex-direction: column;
   border-radius: 0.8rem;
   background-color: #fff;
