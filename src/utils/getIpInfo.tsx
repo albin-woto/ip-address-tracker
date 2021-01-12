@@ -8,7 +8,15 @@ const getIpInfo = async (ip: string) => {
       // If I make a request without ip(''), it will return the public IP info
       ip
         ? `https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ip}`
-        : `https://geo.ipify.org/api/v1?apiKey=${API_KEY}`
+        : `https://geo.ipify.org/api/v1?apiKey=${API_KEY}`,
+      {
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin': 'https://ip-address-tracker-git-main.albin-woto.vercel.app/',
+          'Access-Control-Request-Method': 'GET',
+          'Access-Control-Allow-Headers': 'Content-Type',
+        },
+      }
     );
     const ipInfo: IpInfo = await response.json();
 
