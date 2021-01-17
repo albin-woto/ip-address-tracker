@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import IpContext from '../context/IpContext';
 import getIpInfo from '../utils/getIpInfo';
-import validation from '../utils/validation';
+import validateIp from '../utils/validateIp';
 
 export const useIp = (): {
   ip: string;
@@ -16,7 +16,7 @@ export const useIp = (): {
   // Function that updates context to use in every component
   const updateIpInfo = (ip: string) => {
     const storedIp = ipInfo.ip;
-    const validationResult = validation(ip);
+    const validationResult = validateIp(ip);
     setIsValid(validationResult);
 
     // Checking for invalid input and requesting data already stored(i.e. multiple clicks by user)

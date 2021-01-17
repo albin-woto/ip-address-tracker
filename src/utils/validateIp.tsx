@@ -1,4 +1,4 @@
-const validation = (ip: string): boolean => {
+const validateIp = (ip: string): boolean => {
   const regex = new RegExp(
     '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
   );
@@ -12,4 +12,4 @@ const validation = (ip: string): boolean => {
   return validIp;
 };
 
-export default validation;
+export default validateIp;
