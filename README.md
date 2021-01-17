@@ -2,7 +2,9 @@
 
 ### You can see the site running [here](https://ip-address-tracker.albin-woto.vercel.app/).
 
-This is a challenge by [Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
+### The challenge by [Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
+
+Your challenge is to build out this IP Address Tracker app and get it looking as close to the design as possible. To get the IP Address locations, you'll be using the [IP Geolocation API byIPify](https://geo.ipify.org/). To generate the map, we recommend using [LeafletJS](https://leafletjs.com/).
 
 ---
 
@@ -50,5 +52,3 @@ Your app is ready to be deployed!
 #### `npm run eject`
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
