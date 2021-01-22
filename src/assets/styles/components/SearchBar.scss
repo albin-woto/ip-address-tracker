@@ -24,6 +24,11 @@
       outline: none;
     }
 
+    &:focus {
+      border: 1px solid $dark-gray;
+      box-shadow: 0 0 0.5rem 0 $primary-color;
+    }
+
     &--error {
       box-shadow: 0px 0px 4px 2px red;
     }
@@ -45,7 +50,6 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      
     }
 
     &:hover {
