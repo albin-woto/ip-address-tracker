@@ -34,6 +34,9 @@ export const useIp = (): {
   useEffect(() => {
     const controller = new AbortController();
 
+    // Display alert message because ipify API won't work with any ad blocker
+    window.alert(`Important! Please disable your ad blocker to be able to use ipify's API, this isn't a direct problem with this site. Thank you!`)
+
     if (Object.entries(ipInfo).length === 0) {
       updateIpInfo(ip);
     }
