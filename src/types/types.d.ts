@@ -18,7 +18,7 @@ export default interface IpInfo {
   proxy?: object;
 }
 
-export type IpContext = {
+export type IpContextT = {
   ipInfo: IpInfo;
   loading: boolean;
   setIpInfo: (ipInfo: IpInfo) => void;

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import IpInfo, { IpContext } from '../types/types';
+import IpInfo, { IpContextT } from '../types/types';
 
 // Create context with a undefined default value but assuring it will not be null
-const Context = React.createContext<IpContext>(undefined!);
+const IpContext = React.createContext<IpContextT>(undefined!);
 
 export function IpContextProvider({ children }: { children: React.ReactNode }) {
   const [ipInfo, setIpInfo] = useState<IpInfo>({});
   const [loading, setLoading] = useState<boolean>(true);
 
   return (
-    <Context.Provider value={{ ipInfo, setIpInfo, loading, setLoading }}>
+    <IpContext.Provider value={{ ipInfo, setIpInfo, loading, setLoading }}>
       {children}
-    </Context.Provider>
+    </IpContext.Provider>
   );
 }
 
-export default Context;
+export default IpContext;
